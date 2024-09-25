@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+</head>
+<body style="background-color: lightblue;">
+    <h1>Login form to crack the password</h1>
+    <p>This page is designed with the vulnerability of cracking the password using brute force. You can log in with the username "admin".</p>
+    <label for="username">Username</label>
+    <input id="username" type="text" placeholder="Enter the username here"><br><br>
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="Enter the password here"><br><br>
+    <button id="submmit" onclick="showAlert()">Submit</button><br><br>
+    <p id="result"></p>
+    <script>
+        function showAlert() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if (username === "admin" && password === "superman") {
+                document.getElementById("result").innerHTML = "OHH Great, You are AUTHORIZED ^_^";
+            } else {
+                document.getElementById("result").innerText = "OOOPS, Sorry You are not authorized";
+            }
+            return;
+        }
+    </script>
+</body>
+</html>
+
